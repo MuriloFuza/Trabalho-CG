@@ -144,7 +144,7 @@ void drawRing(float radius) {
 
 void drawBaseWard(){
     glPushMatrix();
-    glBegin(GL_LINE_LOOP);
+    glBegin(GL_POLYGON);
     point(2, 0, 0);
     point(1.5, 0, 1.5);
     point(0, 0, 2);

@@ -17,7 +17,7 @@
 #define y_min 40
 #define ro_min 120
 float ang = 0;
-float eyex = 0, eyey = 30, eyez = 100;
+float eyex = 0, eyey =0, eyez = 120;
 float rotate_global = 0;
 
 #define ALLOW_AXES 1
@@ -73,7 +73,7 @@ void display(void)
      */
     
     glPushMatrix();
-    draw_wing(ang);
+    draw_ward(ang);
     glPopMatrix();
     
     /*

@@ -12,10 +12,23 @@
 
 void draw_wing(float ang){
     glRotatef(ang, 0, 1, 0);
-    glScalef(10.0, 10.0, 10.0);
+    glScalef(7.0, 7.0, 7.0);
     glTranslatef(0, 0, 4);
     
     glPushMatrix();
+    
+    glPushMatrix();
+    glTranslatef(0, 0, -4.9);
+    glBegin(GL_POLYGON);
+    point(9, 3.3, -0.37);
+    point(8.5, 2.3, -0.3);
+    point(7, 1, -0.2);
+    point(5, 0, -0.05);
+    point(7, 1, 0.08);
+    point(8.5, 2.3, 0.18);
+    point(9, 3.3, 0.25);
+    glEnd();
+    glPopMatrix();
     
     //conexão das asas - parte de cima
     glPushMatrix();
@@ -45,7 +58,7 @@ void draw_wing(float ang){
     glPushMatrix();
     glTranslatef(0, 0, -4.95);
     glRotatef(5, 1, 0, 0);
-    glBegin(GL_LINE_LOOP);
+    glBegin(GL_POLYGON);
     
     //base
     point(0, 0, 0);
@@ -75,7 +88,7 @@ void draw_wing(float ang){
     glPushMatrix();
     glTranslatef(0, 0, -5);
     glRotatef(-5, 1, 0, 0);
-    glBegin(GL_LINE_LOOP);
+    glBegin(GL_POLYGON);
     
     //base
     point(0, 0, 0);

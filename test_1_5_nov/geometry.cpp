@@ -64,7 +64,6 @@ void drawCustomCircle(float startingAngle, float endingAngle, float radius, floa
 }
 
 void drawHalfSphere(float radius) {
-    float twoPI = 2 * PI;
     float space = 1;
     float x, y, z;
     
@@ -141,6 +140,55 @@ void drawRing(float radius) {
         point((sin(i)*radius), 0, (cos(i)*radius));
         }
     glEnd();
+}
+
+void drawBaseWard(){
+    glPushMatrix();
+    glBegin(GL_LINE_LOOP);
+    point(2, 0, 0);
+    point(1.5, 0, 1.5);
+    point(0, 0, 2);
+    point(-1.5, 0, 1.5);
+    point(-2, 0, 0);
+    point(-1.5, 0, -1.5);
+    point(0, 0, -2);
+    point(1.5, 0, -1.5);
+    //desceu
+    point(1.5, -0.2, -1.5);
+    
+    point(0, -0.2, -2);
+    point(0, 0, -2);
+    point(0, -0.2, -2);
+    
+    point(-1.5, -0.2, -1.5);
+    point(-1.5, 0, -1.5);
+    point(-1.5, -0.2, -1.5);
+    
+    point(-2, -0.2, 0);
+    point(-2, 0, 0);
+    point(-2, -0.2, 0);
+    
+    point(-1.5, -0.2, 1.5);
+    point(-1.5, 0, 1.5);
+    point(-1.5, -0.2, 1.5);
+    
+    point(0, -0.2, 2);
+    point(0, 0, 2);
+    point(0, -0.2, 2);
+    
+    point(1.5, -0.2, 1.5);
+    point(1.5, 0, 1.5);
+    point(1.5, -0.2, 1.5);
+    
+    point(2, -0.2, 0);
+    point(2, 0, 0);
+    point(2, -0.2, 0);
+    
+    point(1.5, -0.2, -1.5);
+    point(1.5, 0, -1.5);
+    
+    glEnd();
+    glPopMatrix();
 }
 
 #endif

@@ -34,4 +34,6 @@ void drawHalfRings(float radius_top, float radius_bottom, float gap, int solid);
 
 void drawHalfRingsSword(float radius_top, float radius_bottom, float gap, int solid);
 
+void drawBaseWard();
+
 #endif

@@ -11,11 +11,12 @@
 #include "draw_potion.h"
 #include "draw_shield.hpp"
 #include "draw_sword.hpp"
+#include "draw_ward.hpp"
 
 #define y_min 40
 #define ro_min 120
 float ang = 0;
-float eyex = 0, eyey = 0, eyez = 100;
+float eyex = 0, eyey = 100, eyez = 100;
 float rotate_global = 0;
 
 #define ALLOW_AXES 1
@@ -32,7 +33,6 @@ void display(void)
     
     /* Define a posição do observador */
     gluLookAt(eyex, eyey, eyez, 0, 0, 0, 0, 1, 0);
-    //gluLookAt(<#GLdouble eyeX#>, <#GLdouble eyeY#>, <#GLdouble eyeZ#>, <#GLdouble centerX#>, <#GLdouble centerY#>, <#GLdouble centerZ#>, <#GLdouble upX#>, <#GLdouble upY#>, <#GLdouble upZ#>)
     
     if(ALLOW_AXES){
             /* Desenhando eixos */
@@ -72,7 +72,7 @@ void display(void)
      */
     
     glPushMatrix();
-    draw_sword(ang);
+    draw_ward(ang);
     glPopMatrix();
     
     /*

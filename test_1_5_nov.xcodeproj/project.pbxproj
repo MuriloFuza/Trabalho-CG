@@ -15,6 +15,7 @@
 		E545A0F02916E07C005F5791 /* draw_potion.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E545A0EE2916E07C005F5791 /* draw_potion.cpp */; };
 		E545A0F72916E585005F5791 /* draw_shield.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E545A0F52916E585005F5791 /* draw_shield.cpp */; };
 		E545A0FA291704A8005F5791 /* draw_sword.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E545A0F8291704A8005F5791 /* draw_sword.cpp */; };
+		E55B235E291AC28E007B43C8 /* draw_ward.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E55B235C291AC28E007B43C8 /* draw_ward.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		E545A0F62916E585005F5791 /* draw_shield.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = draw_shield.hpp; sourceTree = "<group>"; };
 		E545A0F8291704A8005F5791 /* draw_sword.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = draw_sword.cpp; sourceTree = "<group>"; };
 		E545A0F9291704A8005F5791 /* draw_sword.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = draw_sword.hpp; sourceTree = "<group>"; };
+		E55B235C291AC28E007B43C8 /* draw_ward.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = draw_ward.cpp; sourceTree = "<group>"; };
+		E55B235D291AC28E007B43C8 /* draw_ward.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = draw_ward.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				E545A0F62916E585005F5791 /* draw_shield.hpp */,
 				E545A0F8291704A8005F5791 /* draw_sword.cpp */,
 				E545A0F9291704A8005F5791 /* draw_sword.hpp */,
+				E55B235C291AC28E007B43C8 /* draw_ward.cpp */,
+				E55B235D291AC28E007B43C8 /* draw_ward.hpp */,
 			);
 			path = test_1_5_nov;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 				E545A0DD2916D121005F5791 /* main.cpp in Sources */,
 				E545A0EA2916D21D005F5791 /* glut.cpp in Sources */,
 				E545A0F02916E07C005F5791 /* draw_potion.cpp in Sources */,
+				E55B235E291AC28E007B43C8 /* draw_ward.cpp in Sources */,
 				E545A0FA291704A8005F5791 /* draw_sword.cpp in Sources */,
 				E545A0ED2916D231005F5791 /* geometry.cpp in Sources */,
 				E545A0F72916E585005F5791 /* draw_shield.cpp in Sources */,

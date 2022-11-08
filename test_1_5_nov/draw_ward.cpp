@@ -17,6 +17,18 @@ void draw_ward(float ang){
     
     glPushMatrix();
     
+    glPushMatrix();
+    glTranslatef(2, 0, 0);
+    glScalef(10, 10, 1);
+    //drawWing(1, 10);
+    glPopMatrix();
+    
+    glPushMatrix();
+    glTranslatef(0, 4.7, 0);
+    glScalef(0.65, 0.65, 0.65);
+    glutWireDodecahedron();
+    glPopMatrix();
+    
     //base de cima
     glPushMatrix();
     glScalef(0.5, 1, 0.5);

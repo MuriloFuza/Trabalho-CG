@@ -12,11 +12,12 @@
 #include "draw_shield.hpp"
 #include "draw_sword.hpp"
 #include "draw_ward.hpp"
+#include "draw_wing.hpp"
 
 #define y_min 40
 #define ro_min 120
 float ang = 0;
-float eyex = 0, eyey = 100, eyez = 100;
+float eyex = 0, eyey = 30, eyez = 100;
 float rotate_global = 0;
 
 #define ALLOW_AXES 1
@@ -72,7 +73,7 @@ void display(void)
      */
     
     glPushMatrix();
-    draw_ward(ang);
+    draw_wing(ang);
     glPopMatrix();
     
     /*

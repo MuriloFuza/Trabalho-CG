@@ -191,4 +191,13 @@ void drawBaseWard(){
     glPopMatrix();
 }
 
+void drawWing(int factor, int numPoints) {
+    // GL_POINTS | GL_TRIANGLE_FAN
+    glBegin(GL_TRIANGLE_FAN);
+        for(int i = 0, j = numPoints; i < numPoints; i++, j--) {
+            point(0.1 * i, 0.005 * i * i, 0.02 * i * factor);
+        }
+    glEnd();
+}
+
 #endif

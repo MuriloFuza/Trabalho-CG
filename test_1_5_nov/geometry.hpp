@@ -36,4 +36,6 @@ void drawHalfRingsSword(float radius_top, float radius_bottom, float gap, int so
 
 void drawBaseWard();
 
+void drawWing(int factor, int numPoints);
+
 #endif

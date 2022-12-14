@@ -11,39 +11,43 @@
 #define DRAW_POTION_CPP
 
 GLUquadricObj *quadratic = gluNewQuadric();
+GLUquadric* sphere;
 
-void draw_pot(float ang){
+
+
+void draw_pot(float ang, unsigned int texture_vidro[2], unsigned int texture_tampa[2]){
+    sphere = gluNewQuadric();
     /* Desenha os planetas com hierarquia*/
     glRotatef(ang, 0, 1, 0);
     glPushMatrix();
     
     color(0.4 , 0.4, 0.95);
     glRotatef(-90, 1, 0, 0);
-    glScalef(15.0, 15.0, 15.0);
-    glutWireSphere(0.7, 30, 30);
+    glScalef(20.0, 20.0, 20.0);
+    //glutWireSphere( 0.7, 30, 30);
+    
+    gluQuadricDrawStyle(sphere, GLU_FILL);
+    gluQuadricNormals(sphere, GLU_SMOOTH);
+    glBindTexture(GL_TEXTURE_2D, texture_vidro[0]);
+    gluQuadricTexture(sphere, GL_TRUE);
+    gluSphere(sphere, 0.7, 30, 30);
     
     glPushMatrix();
         glTranslatef(0, 0, 0.65);
+        glBindTexture(GL_TEXTURE_2D, texture_vidro[0]);
+        gluQuadricTexture(quadratic, GL_TRUE);
         gluCylinder(quadratic, 0.3, 0.3, 0.2, 30, 30);
     glPopMatrix();
     
     glPushMatrix();
         glTranslatef(0, 0, 0.7);
-    color(0, 0, 0);
+        color(0, 0, 0);
+        glBindTexture(GL_TEXTURE_2D, texture_tampa[0]);
+        gluQuadricTexture(quadratic, GL_TRUE);
         gluCylinder(quadratic, 0.2, 0.25, 0.2, 30, 30);
     glPopMatrix();
     
-    glPushMatrix();
-    glTranslatef(0, 0, 0.75);
-    glRotatef(90, 1, 0, 0);
-    drawRings(0.32, 0.32, 0.05, 0);
-    glPopMatrix();
-    
-    glPushMatrix();
-    glTranslatef(0, 0, 0.3);
-    glRotatef(90, 1, 0, 0);
-    drawRings(0.6, 0.7, 0.15, 0);
-    glPopMatrix();
+
     
     
     

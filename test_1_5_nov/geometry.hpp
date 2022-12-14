@@ -18,11 +18,11 @@
 
 float rad(float angle);
 
-void drawCircle(float radius, int solid);
+void drawCircle(float radius, int solid, unsigned int texture[2]);
 
 void drawCustomCircle(float startingAngle, float endingAngle, float radius, float spacing, int x, int y, int z, int solid);
 
-void drawHalfSphere(float radius);
+void drawHalfSphere(float radius, unsigned int textura[2]);
 
 void drawSphereSection(float startingTheta, float startingPhi, float endingTheta, float endingPhi, float radius, float space, int solid);
 
@@ -32,9 +32,9 @@ void drawRing(float radius);
 
 void drawHalfRings(float radius_top, float radius_bottom, float gap, int solid);
 
-void drawHalfRingsSword(float radius_top, float radius_bottom, float gap, int solid);
+void drawHalfRingsSword(float radius_top, float radius_bottom, float gap, int solid, unsigned int texture[2]);
 
-void drawBaseWard();
+void drawBaseWard(unsigned int texture[2]);
 
 void drawWing(int factor, int numPoints);
 

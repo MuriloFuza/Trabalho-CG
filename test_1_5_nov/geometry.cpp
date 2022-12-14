@@ -27,14 +27,15 @@ float rad(float angle) {
     return (angle / 180) * PI;
 }
 
-void drawCircle(float radius, int solid) {
+void drawCircle(float radius, int solid,  unsigned int texture[2]) {
     float twoPI = 2 * PI;
 
         // GL_TRIANGLE_FAN | GL_POINTS
+    glBindTexture(GL_TEXTURE_2D, texture[0]);
     glBegin(!solid ? GL_POINTS : GL_TRIANGLE_FAN);
         for (float i = 0.0; i <= twoPI; i += 0.001){
-            point((sin(i)*radius), (cos(i)*radius), 0);
-            point((sin(i)*radius), (cos(i)*radius), -0.003);
+            glTexCoord2f((sin(i)*radius), (cos(i)*radius)); point((sin(i)*radius), (cos(i)*radius), 0);
+            glTexCoord2f((sin(i)*radius), (cos(i)*radius)); point((sin(i)*radius), (cos(i)*radius), -0.003);
             }
     glEnd();
 }
@@ -63,17 +64,20 @@ void drawCustomCircle(float startingAngle, float endingAngle, float radius, floa
   glEnd();
 }
 
-void drawHalfSphere(float radius) {
+void drawHalfSphere(float radius, unsigned int textura[2]) {
     float space = 1;
     float x, y, z;
     
     //GL_POINTS | GL_TRIANGLE_FAN
+    glBindTexture(GL_TEXTURE_2D, textura[0]);
     glBegin(GL_POINTS);
         for (float theta = 0; theta <= 90 - space; theta += space) {
+            
             for (float phi = 0; phi <= 360 - space; phi += space) {
                 x = radius * sin(phi/180 * PI) * sin(theta/180 * PI);
                 y = radius * cos(phi/180 * PI) * sin(theta/180 * PI);
                 z = radius * cos(theta/180 * PI);
+                glTexCoord2f(x, y);
                 point(x, y, z);
             }
         }
@@ -120,13 +124,14 @@ void drawHalfRings(float radius_top, float radius_bottom, float gap, int solid) 
     glEnd();
 }
 
-void drawHalfRingsSword(float radius_top, float radius_bottom, float gap, int solid) {
+void drawHalfRingsSword(float radius_top, float radius_bottom, float gap, int solid, unsigned int texture[2]) {
     
     //GL_POINTS | GL_TRIANGLE_FAN
+    glBindTexture(GL_TEXTURE_2D, texture[0]);
     glBegin(!solid ? GL_POINTS : GL_LINES);
     for (float i = 30; i <= 150; i += 0.001){
-        point((sin(rad(i))*radius_top), gap/2,(cos(rad(i))*radius_top) );
-        point((sin(rad(i))*radius_top), -gap/2, (cos(rad(i))*radius_top));
+        glTexCoord2f((sin(rad(i))*radius_top),(cos(rad(i))*radius_top));    point((sin(rad(i))*radius_top), gap/2,(cos(rad(i))*radius_top) );
+        glTexCoord2f((sin(rad(i))*radius_top),(cos(rad(i))*radius_top));   point((sin(rad(i))*radius_top), -gap/2, (cos(rad(i))*radius_top));
     }
     glEnd();
 }
@@ -142,10 +147,12 @@ void drawRing(float radius) {
     glEnd();
 }
 
-void drawBaseWard(){
+void drawBaseWard(unsigned int texture[2]){
+    
     glPushMatrix();
+    glBindTexture(GL_TEXTURE_2D, texture[0]);
     glBegin(GL_POLYGON);
-    point(2, 0, 0);
+    glTexCoord2f(1.0, 0.0);    point(2, 0, 0);
     point(1.5, 0, 1.5);
     point(0, 0, 2);
     point(-1.5, 0, 1.5);
@@ -154,7 +161,7 @@ void drawBaseWard(){
     point(0, 0, -2);
     point(1.5, 0, -1.5);
     //desceu
-    point(1.5, -0.2, -1.5);
+    glTexCoord2f(0.0, 1.0); point(1.5, -0.2, -1.5);
     
     point(0, -0.2, -2);
     point(0, 0, -2);
@@ -164,7 +171,7 @@ void drawBaseWard(){
     point(-1.5, 0, -1.5);
     point(-1.5, -0.2, -1.5);
     
-    point(-2, -0.2, 0);
+    glTexCoord2f(1.0, 1.0); point(-2, -0.2, 0);
     point(-2, 0, 0);
     point(-2, -0.2, 0);
     
@@ -172,7 +179,7 @@ void drawBaseWard(){
     point(-1.5, 0, 1.5);
     point(-1.5, -0.2, 1.5);
     
-    point(0, -0.2, 2);
+    glTexCoord2f(0.0, 0.0); point(0, -0.2, 2);
     point(0, 0, 2);
     point(0, -0.2, 2);
     

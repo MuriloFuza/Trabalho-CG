@@ -17,6 +17,7 @@
 #include <GL/glut.h>
 #endif
 #include <iostream>
+#include <fstream>
 
 #define GLUT_HPP
 

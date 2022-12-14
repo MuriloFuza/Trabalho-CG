@@ -10,6 +10,6 @@
 
 #include <stdio.h>
 
-void draw_shield(float ang);
+void draw_shield(float ang, unsigned int texture_base[2], unsigned int texture_esferas_pratas[2]);
 
 #endif /* draw_shield_hpp */

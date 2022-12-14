@@ -10,6 +10,6 @@
 
 #include <stdio.h>
 
-void draw_ward(float ang);
+void draw_ward(float ang, unsigned int texture_cabo[2], unsigned int texture_base[2]);
 
 #endif /* draw_ward_hpp */

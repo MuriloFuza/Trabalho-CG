@@ -153,43 +153,43 @@ void drawBaseWard(unsigned int texture[2]){
     glBindTexture(GL_TEXTURE_2D, texture[0]);
     glBegin(GL_POLYGON);
     glTexCoord2f(1.0, 0.0);    point(2, 0, 0);
-    point(1.5, 0, 1.5);
-    point(0, 0, 2);
-    point(-1.5, 0, 1.5);
-    point(-2, 0, 0);
-    point(-1.5, 0, -1.5);
-    point(0, 0, -2);
-    point(1.5, 0, -1.5);
+    glTexCoord2f(1.0, 0.0);point(1.5, 0, 1.5);
+    glTexCoord2f(1.0, 0.0);point(0, 0, 2);
+    glTexCoord2f(1.0, 0.0);point(-1.5, 0, 1.5);
+    glTexCoord2f(1.0, 0.0);point(-2, 0, 0);
+    glTexCoord2f(1.0, 0.0);point(-1.5, 0, -1.5);
+    glTexCoord2f(1.0, 0.0);point(0, 0, -2);
+    glTexCoord2f(1.0, 0.0);point(1.5, 0, -1.5);
     //desceu
     glTexCoord2f(0.0, 1.0); point(1.5, -0.2, -1.5);
     
-    point(0, -0.2, -2);
-    point(0, 0, -2);
-    point(0, -0.2, -2);
+    glTexCoord2f(0.0, 1.0);point(0, -0.2, -2);
+    glTexCoord2f(0.0, 1.0);point(0, 0, -2);
+    glTexCoord2f(0.0, 1.0);point(0, -0.2, -2);
     
-    point(-1.5, -0.2, -1.5);
-    point(-1.5, 0, -1.5);
-    point(-1.5, -0.2, -1.5);
+    glTexCoord2f(0.0, 1.0);point(-1.5, -0.2, -1.5);
+    glTexCoord2f(0.0, 1.0);point(-1.5, 0, -1.5);
+    glTexCoord2f(0.0, 1.0);point(-1.5, -0.2, -1.5);
     
     glTexCoord2f(1.0, 1.0); point(-2, -0.2, 0);
-    point(-2, 0, 0);
-    point(-2, -0.2, 0);
+    glTexCoord2f(1.0, 1.0);point(-2, 0, 0);
+    glTexCoord2f(1.0, 1.0);point(-2, -0.2, 0);
     
-    point(-1.5, -0.2, 1.5);
-    point(-1.5, 0, 1.5);
-    point(-1.5, -0.2, 1.5);
+    glTexCoord2f(1.0, 1.0);point(-1.5, -0.2, 1.5);
+    glTexCoord2f(1.0, 1.0);point(-1.5, 0, 1.5);
+    glTexCoord2f(1.0, 1.0);point(-1.5, -0.2, 1.5);
     
     glTexCoord2f(0.0, 0.0); point(0, -0.2, 2);
-    point(0, 0, 2);
-    point(0, -0.2, 2);
+    glTexCoord2f(0.0, 0.0);point(0, 0, 2);
+    glTexCoord2f(0.0, 0.0);point(0, -0.2, 2);
     
-    point(1.5, -0.2, 1.5);
-    point(1.5, 0, 1.5);
-    point(1.5, -0.2, 1.5);
+    glTexCoord2f(0.0, 0.0);point(1.5, -0.2, 1.5);
+    glTexCoord2f(0.0, 0.0);point(1.5, 0, 1.5);
+    glTexCoord2f(0.0, 0.0);point(1.5, -0.2, 1.5);
     
-    point(2, -0.2, 0);
-    point(2, 0, 0);
-    point(2, -0.2, 0);
+    glTexCoord2f(0.0, 0.0);point(2, -0.2, 0);
+    glTexCoord2f(0.0, 0.0);point(2, 0, 0);
+    glTexCoord2f(0.0, 0.0);point(2, -0.2, 0);
     
     point(1.5, -0.2, -1.5);
     point(1.5, 0, -1.5);

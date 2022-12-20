@@ -10,6 +10,6 @@
 
 #include <stdio.h>
 
-void draw_wing(float ang);
+void draw_wing(float ang, unsigned int texture_int[2]);
 
 #endif /* draw_wing_hpp */

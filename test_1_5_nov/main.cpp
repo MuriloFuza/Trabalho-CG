@@ -18,8 +18,9 @@ static unsigned char chessboard[64][64][3]; // Storage for chessboard image.
 
 #define y_min 40
 #define ro_min 120
-float ang = 0;
-float eyex = 30, eyey =10, eyez = 100;
+float angX, angY= 0;
+float objX, objY = 10;
+float eyex = 30, eyey =0, eyez = 100;
 float rotate_global = 0;
 
 #define ALLOW_AXES 1
@@ -354,10 +355,10 @@ void display(void)
      */
     
     glPushMatrix();
-    //draw_pot(ang, texture_vidro, texture_tampa);
-    //draw_sword(ang, texture, texture_cabo);
-    //draw_shield(ang, texture, texture_esferas);
-    draw_ward(ang, texture_cabo_ward, texture_base_ward);
+    draw_pot((angX - 0.1), (angY - 0.1), texture_vidro, texture_tampa);
+    draw_sword((angX -0.2), (angY -0.2), texture, texture_cabo);
+    draw_shield((angX - 0.27), (angY -0.27), texture, texture);
+    draw_ward(angX, angY, texture_cabo_ward, texture);
     glPopMatrix();
     
     /*
@@ -370,7 +371,30 @@ void display(void)
 
 void TimerFunc(int value) {
 
-    if(rotate_global == 1) ang += 1.0;
+    if(rotate_global == 1){
+        if(angX <= objX && objX > 0){
+            angX += 0.5;
+            if(angX >= objX){
+                objX = -10;
+            }
+        }else{
+            angX -= 0.5;
+            if(angX <= objX){
+                objX = 10;
+            }
+        }
+        if(angY <= objY && objY > 0){
+            angY += 0.5;
+            if(angY >= objY){
+                objY = -10;
+            }
+        }else{
+            angY -= 0.5;
+            if(angY <= objY){
+                objY = 10;
+            }
+        }
+    };
     glutPostRedisplay();
     glutTimerFunc( 33, TimerFunc, 1);
 }
@@ -404,12 +428,12 @@ void keyboard (unsigned char key, int x, int y)
  glutPostRedisplay();
  break;
  case 'y':
-         ang += 1.0;
+         angX += 1.0;
 
  glutPostRedisplay();
  break;
  case 'u':
-         ang -= 1.0;
+         angX -= 1.0;
 
  glutPostRedisplay();
  break;
@@ -465,7 +489,7 @@ int main(int argc, char** argv)
     Determina o tamanho em pixels da
     janela a ser criada
     */
-    glutInitWindowSize (2560, 1600);
+    glutInitWindowSize (600, 600);
     
     /*
     Estabelece a posicao inicial para criacao da

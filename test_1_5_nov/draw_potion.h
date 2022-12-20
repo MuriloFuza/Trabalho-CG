@@ -8,7 +8,7 @@
 #ifndef draw_potion_h
 #define draw_potion_h
 
-void draw_pot(float ang,  unsigned int texture_vidro[2], unsigned int texture_tampa[2]);
+void draw_pot(float angX, float angY,  unsigned int texture_vidro[2], unsigned int texture_tampa[2]);
 
 #endif /* draw_potion_h */
 

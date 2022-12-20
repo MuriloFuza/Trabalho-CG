@@ -10,6 +10,6 @@
 
 #include <stdio.h>
 
-void draw_sword(float ang, unsigned int texture_1[2], unsigned int texture_cabo[2]);
+void draw_sword(float angX, float angY,unsigned int texture_1[2], unsigned int texture_cabo[2]);
 
 #endif /* draw_sword_hpp */

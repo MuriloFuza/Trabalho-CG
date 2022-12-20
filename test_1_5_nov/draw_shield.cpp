@@ -11,15 +11,15 @@
 
 GLUquadric* sphere_base_shield;
 
-void draw_shield(float ang, unsigned int texture_base[2], unsigned int texture_esferas_pratas[2]){
+void draw_shield(float angX, float angY, unsigned int texture_base[2], unsigned int texture_esferas_pratas[2]){
 
     
     sphere_base_shield = gluNewQuadric();
 
-    glRotatef(ang, 0, 1, 0);
+    glTranslatef(angX, angY, 0);
     glPushMatrix();
     
-    glScalef(15.0, 15.0, 15.0);
+    glScalef(7.0, 7.0, 7.0);
 
     
     //escudo

@@ -32,6 +32,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E5264C8F293B9E23004B307A /* lamina.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = lamina.bmp; sourceTree = "<group>"; };
 		E545A0D92916D121005F5791 /* test_1_5_nov */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = test_1_5_nov; sourceTree = BUILT_PRODUCTS_DIR; };
 		E545A0DC2916D121005F5791 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		E545A0E42916D12E005F5791 /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
@@ -50,6 +51,13 @@
 		E55B235D291AC28E007B43C8 /* draw_ward.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = draw_ward.hpp; sourceTree = "<group>"; };
 		E55B235F291AD728007B43C8 /* draw_wing.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = draw_wing.cpp; sourceTree = "<group>"; };
 		E55B2360291AD728007B43C8 /* draw_wing.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = draw_wing.hpp; sourceTree = "<group>"; };
+		E5B61CAD294A6F8E008F0BB1 /* base_ward.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = base_ward.bmp; sourceTree = "<group>"; };
+		E5F7E8ED2949FA110047BD1C /* cabo.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = cabo.bmp; sourceTree = "<group>"; };
+		E5F7E8F1294A04360047BD1C /* tampa.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = tampa.bmp; sourceTree = "<group>"; };
+		E5F7E8F2294A06BD0047BD1C /* rolha.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = rolha.bmp; sourceTree = "<group>"; };
+		E5F7E8F3294A07C20047BD1C /* vidro.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = vidro.bmp; sourceTree = "<group>"; };
+		E5F7E8F4294A08A30047BD1C /* vidro2.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = vidro2.bmp; sourceTree = "<group>"; };
+		E5F7E8FA294A12FA0047BD1C /* metal.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; path = metal.bmp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +73,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E5264C8D293B9DC6004B307A /* texturas */ = {
+			isa = PBXGroup;
+			children = (
+				E5B61CA9294A6DEF008F0BB1 /* ward */,
+				E5F7E8F5294A09290047BD1C /* shield */,
+				E5F7E8EF2949FEA40047BD1C /* potion */,
+				E5264C8E293B9DCC004B307A /* sword */,
+			);
+			path = texturas;
+			sourceTree = "<group>";
+		};
+		E5264C8E293B9DCC004B307A /* sword */ = {
+			isa = PBXGroup;
+			children = (
+				E5264C8F293B9E23004B307A /* lamina.bmp */,
+				E5F7E8ED2949FA110047BD1C /* cabo.bmp */,
+			);
+			path = sword;
+			sourceTree = "<group>";
+		};
 		E545A0D02916D121005F5791 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +113,7 @@
 		E545A0DB2916D121005F5791 /* test_1_5_nov */ = {
 			isa = PBXGroup;
 			children = (
+				E5264C8D293B9DC6004B307A /* texturas */,
 				E545A0DC2916D121005F5791 /* main.cpp */,
 				E545A0E82916D21D005F5791 /* glut.cpp */,
 				E545A0E92916D21D005F5791 /* glut.hpp */,
@@ -111,6 +140,33 @@
 				E545A0E42916D12E005F5791 /* GLUT.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5B61CA9294A6DEF008F0BB1 /* ward */ = {
+			isa = PBXGroup;
+			children = (
+				E5B61CAD294A6F8E008F0BB1 /* base_ward.bmp */,
+			);
+			path = ward;
+			sourceTree = "<group>";
+		};
+		E5F7E8EF2949FEA40047BD1C /* potion */ = {
+			isa = PBXGroup;
+			children = (
+				E5F7E8F1294A04360047BD1C /* tampa.bmp */,
+				E5F7E8F3294A07C20047BD1C /* vidro.bmp */,
+				E5F7E8F2294A06BD0047BD1C /* rolha.bmp */,
+				E5F7E8F4294A08A30047BD1C /* vidro2.bmp */,
+			);
+			path = potion;
+			sourceTree = "<group>";
+		};
+		E5F7E8F5294A09290047BD1C /* shield */ = {
+			isa = PBXGroup;
+			children = (
+				E5F7E8FA294A12FA0047BD1C /* metal.bmp */,
+			);
+			path = shield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

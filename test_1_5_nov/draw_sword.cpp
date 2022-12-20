@@ -11,14 +11,14 @@
 
 GLUquadric* quadratic_cylinder;
 
-void draw_sword(float ang, unsigned int texture_1[2], unsigned int texture_cabo[2]){
+void draw_sword(float angX, float angY, unsigned int texture_1[2], unsigned int texture_cabo[2]){
     quadratic_cylinder = gluNewQuadric();
     
-    glRotatef(ang, 0, 1, 0);
+    glTranslatef(angX, angY, 0);
     glPushMatrix();
     glTranslatef(0, -20, 0);
 
-    glScalef(10.0, 10.0, 10.0);
+    glScalef(5.0, 5.0, 5.0);
     //glScalef(25.0, 25.0, 25.0);
     
 

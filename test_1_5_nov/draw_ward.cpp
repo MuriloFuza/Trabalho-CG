@@ -13,10 +13,10 @@
 
 GLUquadric* quadratic_ward;
 
-void draw_ward(float ang, unsigned int texture_cabo[2], unsigned int texture_base[2]){
+void draw_ward(float angX, float angY, unsigned int texture_cabo[2], unsigned int texture_base[2]){
     quadratic_ward = gluNewQuadric();
-    glRotatef(ang, 0, 1, 0);
-    glScalef(3.0, 3.0, 3.0);
+    glTranslatef(angX, angY, 0);
+    glScalef(2.0, 2.0, 2.0);
     
     glPushMatrix();
     
@@ -26,7 +26,7 @@ void draw_ward(float ang, unsigned int texture_cabo[2], unsigned int texture_bas
     glTranslatef(0, 1.7, 0);
     glScalef(0.1, 0.1, 0.1);
     glRotatef(180, 0, 1, 0);
-    draw_wing(ang);
+    draw_wing(angX, texture_base);
     glPopMatrix();
     
     //ASA DIREITA
@@ -34,7 +34,7 @@ void draw_ward(float ang, unsigned int texture_cabo[2], unsigned int texture_bas
     glColor3f( 0.81176f, 0.70980f, 0.23137f );
     glTranslatef(0, 1.7, 0);
     glScalef(0.1, 0.1, 0.1);
-    draw_wing(ang);
+    draw_wing(angX, texture_base);
     glPopMatrix();
     
     //joia de cima

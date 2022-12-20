@@ -15,15 +15,15 @@ GLUquadric* sphere;
 
 
 
-void draw_pot(float ang, unsigned int texture_vidro[2], unsigned int texture_tampa[2]){
+void draw_pot(float angX, float angY, unsigned int texture_vidro[2], unsigned int texture_tampa[2]){
     sphere = gluNewQuadric();
     /* Desenha os planetas com hierarquia*/
-    glRotatef(ang, 0, 1, 0);
+    glTranslatef(angX, angY, 0);
     glPushMatrix();
     
     color(0.4 , 0.4, 0.95);
     glRotatef(-90, 1, 0, 0);
-    glScalef(20.0, 20.0, 20.0);
+    glScalef(7.0, 7.0, 7.0);
     //glutWireSphere( 0.7, 30, 30);
     
     gluQuadricDrawStyle(sphere, GLU_FILL);
